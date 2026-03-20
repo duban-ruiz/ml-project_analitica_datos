@@ -1,0 +1,95 @@
+Nombre: Uber Ride Analytics Dataset 2024
+
+Fuente: https://www.kaggle.com/datasets/yashdevladdha/uber-ride-analytics-dashboard
+
+Descripción general del problema: Esta base de datos contiene información detallada
+sobre las operaciones de Uber relacionadas con los viajes compartidos durante el año 2024,
+lo que proporciona información valiosa sobre los patrones de reserva, el rendimiento de los vehículos,
+las fuentes de ingresos, los comportamientos de cancelación y satisfacción del cliente.
+
+Objetivo:Desarrollar un modelo de regresión capaz de predecir el valor de una reserva de viaje,
+la duración del viaje o el tiempo que tarda el conductor en llegar al cliente.
+(Booking Value) a partir de variables operativas y contextuales del servicio.
+
+Variable objetivo:
+    Booking Value
+        Prediccion del costo del viaje
+    Booking Value
+        Predición de la duración del viaje
+    Avg CTAT
+        Predición de la llegada del conductor
+
+Variables:
+    Date
+        Fecha de la reserva
+        Ordinal
+    Time
+        Hora de reserva
+        Numérica continua
+    Bookink ID
+        Identificador único para cada reserva de viaje
+        Categórica nominal
+    Bookink Status
+        Estado de la reserva (Completada, Cancelada por el cliente, Cancelada por el conductor, etc.)
+        Categórica nominal
+    Customer ID
+        Identificador único para clientes
+        Categórica nominal
+    Vehicle Type
+        Tipo de vehículo (Go Mini, Go Sedan, Auto, eBike/Bike, UberXL, Premier Sedan)
+        Categórica nominal
+    Pickup Location
+        Punto de partida del recorrido
+        Categórica nominal
+    Drop Location
+        Lugar de destino del viaje
+        Categórica nominal
+    Avg VTAT
+        Tiempo promedio que tarda el conductor en llegar al lugar de recogida (en minutos)
+        Numérica discreta
+    Avg CTAT
+        Duración media del trayecto desde el punto de recogida hasta el destino (en minutos)
+        Numérica discreta
+    Cancelled Rides by Customer
+        Bandera de cancelación iniciada por el cliente
+        Categórica nominal
+    Reason for cancelling by Customer
+        Motivo de la cancelación por parte del cliente
+        Categórica nominal
+    Cancelled Rides by Driver
+        Bandera de cancelación iniciada por el conductor
+        Categórica nominal
+    Driver Cancellation Reason
+        Motivo de la cancelación del conductor
+        Categórica nominal
+    Incomplete Rides
+        Bandera de atracción incompleta
+        Categórica nominal
+    Incomplete Rides Reason
+        Motivo de los recorridos incompletos
+        Categórica nominal
+    Booking Value
+        Importe total de la tarifa del viaje
+        Numérica continua
+    Ride Distance
+        Distancia recorrida durante el trayecto (en km)
+        Numérica continua
+    Driver Ratings
+        Calificación otorgada al conductor (escala de 1 a 5)
+        Numérica continua
+    Customer Rating
+        Calificación otorgada por el cliente (escala de 1 a 5)
+        Numérica continua
+    Payment Method
+        Método de pago utilizado (UPI, efectivo, tarjeta de crédito, Uber Wallet, tarjeta de débito)
+
+Número de observaciones: 150.000
+
+Número de variables: 21
+
+Posibles hipótesis de estudio:
+    1) El precio del viaje depende de la distancia por recorrer, el tiempo que tarde,
+    el tipo de vehiculo, la hora de la reserva y el lugar donde se haga.
+    2) La duración del viaje depende de la distancia por recorrer, la hora a la que se haga
+    el recorrido, y la localización
+    3) El tiempo de llegada del conductor depende de donde se haga la reserva y la hora
